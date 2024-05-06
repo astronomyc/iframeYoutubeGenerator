@@ -17,10 +17,31 @@ src="https://www.youtube.com/embed/${video_id}?autoplay=1&mute=1&cc_load_policy=
     iframeplayer.innerHTML = embed.value;
 });
 
-// button to copy the code embed
 document.getElementById("copy").addEventListener("click", function () {
     let copyText = document.getElementById("embed");
+
+    if (copyText.value == "") {
+        let notification = document.getElementById("notification2");
+        notification.classList.add("show");
+
+        clearTimeout(notification.timeoutId);
+
+        notification.timeoutId = setTimeout(() => {
+            notification.classList.remove("show");
+        }, 800);
+
+        return
+    }
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
+
+    let notification = document.getElementById("notification1");
+    notification.classList.add("show");
+
+    clearTimeout(notification.timeoutId);
+
+    notification.timeoutId = setTimeout(() => {
+        notification.classList.remove("show");
+    }, 800);
 });

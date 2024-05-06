@@ -14,7 +14,7 @@
         <h1>YouTube Embed Code Generator</h1>
         <div class="form">
             <div class="url">
-                <input type="text" id="url" placeholder="Introduce la URL de YouTube">
+                <input type="text" id="url" placeholder="Introduce la URL de YouTube" autocomplete="off">
                 <button id="genetator">Generar</button>
             </div>
         </div>
@@ -30,10 +30,14 @@
         <div id="iframeplayer"></div>
     </div>
         <!-- div de notificacion a la derecha abajo -->
-        <div class="notification">
+        <div class="notification-check" id="notification1">
             <i class='bx bx-check'></i>
-            <p id="notify">Copiado al portapapeles</p>
+            <p id="notify-check">Copiado al portapapeles</p>
         </div>
+        <!-- div de notificacion de error en caso de que este vacio el textarea -->
+        <div class="notification-error" id="notification2">
+            <i class='bx bx-x'></i>
+            <p id="notify-error">No hay nada que copiar</p>
     <script src="script.js"></script>
 </body>
 </html>
