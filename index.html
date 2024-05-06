@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Youtube_logo.png" type="image/png">
+    <title>YouTube Embed Code Generator</title>
+</head>
+<body>
+    <!-- Generador de código de inserción de YouTube usando solo javascript puro. -->
+    <div class="container">
+        <h1>YouTube Embed Code Generator</h1>
+        <div class="form">
+            <div class="url">
+                <input type="text" id="url" placeholder="Introduce la URL de YouTube">
+                <button id="genetator">Generar</button>
+            </div>
+        </div>
+        <div class="result">
+            <textarea
+            id="embed"
+            placeholder="Codigo"
+            readonly
+            rows="5"
+            ></textarea>
+        </div>
+        <div id="iframeplayer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
