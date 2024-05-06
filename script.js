@@ -16,3 +16,11 @@ src="https://www.youtube.com/embed/${video_id}?autoplay=1&mute=1&cc_load_policy=
     let iframeplayer = document.getElementById("iframeplayer");
     iframeplayer.innerHTML = embed.value;
 });
+
+// button to copy the code embed
+document.getElementById("copy").addEventListener("click", function () {
+    let copyText = document.getElementById("embed");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+});
